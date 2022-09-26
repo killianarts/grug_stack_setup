@@ -8,6 +8,7 @@ django = "*"
 django-htmx = "*"
 django-widget-tweaks = "*"
 django-tailwind = "*"
+django-render-block = "*"
 
 [dev-packages]
 

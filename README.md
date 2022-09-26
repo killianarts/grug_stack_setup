@@ -1,4 +1,4 @@
-The GRUG stack is a [Hypermedia-Driven Application](https://htmx.org/essays/hypermedia-driven-applications/) development
+The Grug Stack is a [Hypermedia-Driven Application](https://htmx.org/essays/hypermedia-driven-applications/) development
 environment that enables full-stack developers to develop cutting-edge applications without the complexity of modern 
 Single Page Application development.
 
@@ -10,7 +10,7 @@ It consists of:
 4. [TailwindCSS](https://tailwindcss.com/)
 
 Some people prefer to substitute [Alpine.js](https://alpinejs.dev/) for _hyperscript. While technically different, they both occupy the same
-place in the GRUG stack. I'll teach how to install both.
+place in the Grug Stack. I'll teach how to install both.
 
 ## The Fastest Way
 
@@ -21,7 +21,7 @@ a `base.html` template that looks like this:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The GRUG Stack</title>
+    <title>The Grug Stack</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -298,7 +298,7 @@ You are now ready to start building your next Hypermedia-Driven Application
 We didn't touch on why we installed `django-widget-tweaks` and `django-render-block`.
 
 In a future guide you will see a practical example of how these are used and why they are part of the
-GRUG stack development environment. To put it simply:
+Grug Stack development environment. To put it simply:
 
 1. `django-widget-tweaks` lets us style Django forms in the template, rather than in the `forms.py` file. That allows us to follow the principle of [Locality of Behavior](https://htmx.org/essays/locality-of-behaviour/). It also makes using Tailwind much easier.
 2. `django-render-block` similarly lets us include [template fragments](https://htmx.org/essays/template-fragments/) inside main template files, again allowing us to follow the principle of Locality of Behavior.

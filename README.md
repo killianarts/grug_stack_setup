@@ -1,3 +1,4 @@
+# The Grug Stack
 The Grug Stack is a [Hypermedia-Driven Application](https://htmx.org/essays/hypermedia-driven-applications/) development
 environment that enables full-stack developers to develop cutting-edge applications without the complexity of modern 
 Single Page Application development.
@@ -12,7 +13,7 @@ It consists of:
 Some people prefer to substitute [Alpine.js](https://alpinejs.dev/) for _hyperscript. While technically different, they both occupy the same
 place in the Grug Stack. I'll teach how to install both.
 
-## The Fastest Way
+# The Fastest Way
 
 If you just want to try the whole stack out fast, install Django (or your choice of backend frameworks) and then make
 a `base.html` template that looks like this:
@@ -51,7 +52,7 @@ You are now ready to develop the latest Hypermedia-Driven Applications.
 
 However, if you want to make an environment that you can later use in production, follow the rest of this tutorial.
 
-## Summary
+# Summary
 
 For the busy developer:
 
@@ -97,29 +98,29 @@ Your `base.html` file should look like this when you're finished:
 </html>
 ```
 
-## Detailed Instructions
+# Detailed Instructions
 
 After installing everything via `pip`, continue with the following:
 
-### Make new app
+## Make new app
 
 `python manage.py startapp core`
 
-### Make static directory
+## Make static directory
 
 Make a directory called `static` in the `core` app directory.
 Make a directory called `core` in the `static` app directory (yes, really).
 
 We'll use this directory later. Still more setup to do.
 
-### Make templates directory
+## Make templates directory
 
 Make a directory called `templates` in the `core` app.
 Make a directory called `core` in the `templates` folder (stop asking questions, grug).
 
 We'll use this directory later. Still more setup to do.
 
-### Add to `INSTALLED_APPS`
+## Add to `INSTALLED_APPS`
 
 ```diff
 INSTALLED_APPS = [
@@ -137,7 +138,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-### HTMX: Add Middleware
+## HTMX: Add Middleware
 
 ```diff
 MIDDLEWARE = [
@@ -148,14 +149,14 @@ MIDDLEWARE = [
 ]
 ```
 
-### HTMX: Download and add to static folder
+## HTMX: Download and add to static folder
 
 1. Download HTMX [here](https://unpkg.com/htmx.org/dist/htmx.min.js)
 2. Put it in the `core` app's static directory (you will put it in `core/static/core/htmx.min.js`)
 
 We're done with HTMX for now.
 
-### Tailwind: Create Tailwind CSS app
+## Tailwind: Create Tailwind CSS app
 
 Run django-tailwind initialization script.
 
@@ -163,7 +164,7 @@ Run django-tailwind initialization script.
 
 Follow instructions. Use default name `theme` for app.
 
-### Tailwind: Modify `settings.py`
+## Tailwind: Modify `settings.py`
 
 ```diff
 INSTALLED_APPS = [
@@ -186,15 +187,15 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     ...,
     'django_htmx.middleware.HtmxMiddleware',
-+    'django_browser_reload.middleware.BrowserReloadMiddleware',
++   'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 ```
 
-### Tailwind: Install TailwindCSS dependencies
+# Tailwind: Install TailwindCSS dependencies
 
 `python manage.py tailwind install`
 
-### Tailwind: Add `django_browser_reload` to `urls.py`
+## Tailwind: Add `django_browser_reload` to `urls.py`
 
 ```python
 ## contact/contact/urls.py
@@ -212,7 +213,7 @@ When we created the `theme` app with `python manage.py tailwind init`,
 `django-tailwind` very kindly provided us a `base.html` file in the `theme/templates` folder.
 Let's edit it.
 
-### Final setup
+# Final setup
 
 The default `base.html` file provided by `django-tailwind` looks like this:
 
@@ -293,7 +294,7 @@ Phew! Setup complete, grug brother.
 
 You are now ready to start building your next Hypermedia-Driven Application
 
-## One last thing
+# One last thing
 
 We didn't touch on why we installed `django-widget-tweaks` and `django-render-block`.
 
